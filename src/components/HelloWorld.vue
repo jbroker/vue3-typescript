@@ -41,6 +41,9 @@ export default defineComponent({
   props: {
     msg: String,
   },
+  setup() {
+    console.log('ENV', process.env);
+  },
 });
 </script>
 
