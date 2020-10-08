@@ -1,18 +1,18 @@
 import { Router, RouteRecordRaw } from 'vue-router';
 
 const Container = () => import('./components/index.vue');
-const Test2 = () => import(/* webpackChunkName: "test2" */ './components/test1.vue');
+const Test2 = () => import(/* webpackChunkName: "test2" */ './components/test2.vue');
 
-export default function updateRouter(router: Router, mountPoint: string) {
+export default function updateRouter(router: Router) {
   if (!router) throw new Error('Missing router options');
 
   const routes: Array<RouteRecordRaw> = [
     {
-      path: `${mountPoint}/test2`,
+      path: '/test2',
       component: Container,
       children: [
         {
-          path: '/',
+          path: 'main',
           name: 'test2',
           component: Test2,
         },
@@ -20,5 +20,5 @@ export default function updateRouter(router: Router, mountPoint: string) {
     },
   ];
 
-  router.options.routes.concat(router.options.routes, routes);
+  routes.forEach(x => router.addRoute(x));
 }

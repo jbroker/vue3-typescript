@@ -3,7 +3,7 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link :to="{name: 'test1'}">Test 1</router-link> |
-    <!-- <router-link :to="{name: 'test2'}">Test 2</router-link> | -->
+    <router-link :to="{name: 'test2'}">Test 2</router-link> |
   </div>
   <router-view/>
 </template>

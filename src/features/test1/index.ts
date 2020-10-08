@@ -5,6 +5,6 @@ import updateRouter from './update-router';
 export default {
   install: (app: App, router: Router) => {
     console.log('install', router);
-    updateRouter(router, '');
+    updateRouter(router);
   },
 };
