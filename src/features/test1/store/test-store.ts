@@ -1,4 +1,4 @@
-import { Store } from '@/store/test-store';
+import { Store } from '@/store';
 
 interface Test extends Object {
   name: string,
