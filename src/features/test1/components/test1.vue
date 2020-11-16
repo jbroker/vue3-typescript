@@ -8,7 +8,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { useRouter } from 'vue-router';
-import { testStore } from '../store/test-store';
+import testStore from '../store/test-store';
 
 export default defineComponent({
   setup() {
